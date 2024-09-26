@@ -41,8 +41,10 @@ public class IdTypeUtil {
 				return idValidator.validateUIN(uin);
 			else
 				return false;
-		} catch (InvalidIDException  | IdAuthenticationBusinessException | NumberFormatException e) {
+		} catch (InvalidIDException | IdAuthenticationBusinessException | NumberFormatException e) {
+			return false;
 		}
+
 	}
 
 	public boolean validateVid(String vid) {

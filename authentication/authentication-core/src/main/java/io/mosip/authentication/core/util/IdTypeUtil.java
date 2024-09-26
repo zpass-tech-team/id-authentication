@@ -41,8 +41,7 @@ public class IdTypeUtil {
 				return idValidator.validateUIN(uin);
 			else
 				return false;
-		} catch (InvalidIDException  | IdAuthenticationBusinessException e) {
-			return false;
+		} catch (InvalidIDException  | IdAuthenticationBusinessException | NumberFormatException e) {
 		}
 	}
 
@@ -52,7 +51,7 @@ public class IdTypeUtil {
 				return idValidator.validateVID(vid);
 			else
 				return false;
-		} catch (InvalidIDException | IdAuthenticationBusinessException e) {
+		} catch (InvalidIDException | IdAuthenticationBusinessException | NumberFormatException e) {
 			return false;
 		}
 	}
